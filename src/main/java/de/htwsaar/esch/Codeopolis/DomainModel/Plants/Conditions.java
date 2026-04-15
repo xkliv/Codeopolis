@@ -148,6 +148,14 @@ public class Conditions {
 		float soilConditions = random.nextFloat(); // generates a random float value between 0.0 (inclusive) and 1.0 (exclusive)
 		float averageTemperatureSummer = random.nextFloat() * 30.0f; // generates a random float value between 0.0 (inclusive) and 30.0 (exclusive)
 		float averageTemperatureWinter = random.nextFloat() * 20.0f - 10.0f; // generates a random float value between -10.0 (inclusive) and 10.0 (exclusive)
-		return new Conditions(soilConditions, averageTemperatureSummer, averageTemperatureWinter);
+
+		boolean drought = random.nextFloat() > 0.8 ? true : false;
+		boolean fusarium = random.nextFloat() > 0.8 ? true : false;
+		boolean leafDrought = random.nextFloat() > 0.8 ? true : false;
+		boolean powderyMildew = random.nextFloat() > 0.8 ? true : false;
+		boolean barleyGoutFly = random.nextFloat() > 0.8 ? true : false;
+		boolean deliaFly = random.nextFloat() > 0.8 ? true : false;
+		boolean fritFly = random.nextFloat() > 0.8 ? true : false;
+		return new Conditions(soilConditions, averageTemperatureSummer, averageTemperatureWinter, drought, fusarium, leafDrought, powderyMildew, barleyGoutFly, deliaFly, fritFly);
 	}
 }
