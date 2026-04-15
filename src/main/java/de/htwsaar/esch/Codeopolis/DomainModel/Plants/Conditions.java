@@ -22,7 +22,7 @@ public class Conditions {
 	/**
      * Constructs a new `Conditions` object with specified values for soil conditions and temperatures.
      *
-     * @param soilConditions         The soil conditions affecting plant growth (a float value between 0.0 and 1.0).
+     * @param soilConditions           The soil conditions affecting plant growth (a float value between 0.0 and 1.0).
      * @param averageTemperatureSummer The average summer temperature (in degrees Celsius).
      * @param averageTemperatureWinter The average winter temperature (in degrees Celsius).
 	 * @param drought                  Whether there is a drought.
@@ -75,9 +75,69 @@ public class Conditions {
 		return averageTemperatureWinter;
 	}
 
+	/**
+	 * Returns whether there is a drought.
+	 *
+	 * @return true if there is a drought, otherwise false.
+	 */
+	public boolean isDrought() {
+		return drought;
+	}
 
+	/**
+	 * Returns whether fusarium occurs.
+	 *
+	 * @return true if fusarium occurs, otherwise false.
+	 */
+	public boolean hasFusarium() {
+		return fusarium;
+	}
 
-	
+	/**
+	 * Returns whether leaf drought occurs.
+	 *
+	 * @return true if leaf drought occurs, otherwise false.
+	 */
+	public boolean hasLeafDrought() {
+		return leafDrought;
+	}
+
+	/**
+	 * Returns whether powdery mildew occurs.
+	 *
+	 * @return true if powdery mildew occurs, otherwise false.
+	 */
+	public boolean hasPowderyMildew() {
+		return powderyMildew;
+	}
+
+	/**
+	 * Returns whether barley gout fly occurs.
+	 *
+	 * @return true if barley gout fly occurs, otherwise false.
+	 */
+	public boolean hasBarleyGoutFly() {
+		return barleyGoutFly;
+	}
+
+	/**
+	 * Returns whether delia fly occurs.
+	 *
+	 * @return true if delia fly occurs, otherwise false.
+	 */
+	public boolean hasDeliaFly() {
+		return deliaFly;
+	}
+
+	/**
+	 * Returns whether frit fly occurs.
+	 *
+	 * @return true if frit fly occurs, otherwise false.
+	 */
+	public boolean hasFritFly() {
+		return fritFly;
+	}
+
 	/**
 	 * Factory method to create a new Conditions object with random values for all fields.
 	 *
